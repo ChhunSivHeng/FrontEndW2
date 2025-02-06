@@ -30,17 +30,15 @@ function checkCode() {
         hide(lostView);
         show(wonView);
     } else {
-        chancesRemaining--;
-
-        if (chancesRemaining > 0) {
-            hide(passwordView);
-            show(lostView);
-            lostMessage.innerHTML = `Wrong code! Try again. (${chancesRemaining} chances left)`;
+        // chancesRemaining--;
+        if (chancesRemaining > 1) {
+            // wrong code
+            chancesRemaining--;
+            instructionLabel.textContent = `Wrong code! ${chancesRemaining} chances remaining`;
         } else {
             // no chancs
             hide(passwordView);
             show(lostView);
-            lostMessage.innerHTML = "YOU LOST!";
             checkButton.disabled = true;
         }
     }
