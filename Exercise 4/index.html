@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password input with show/hide toggle</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <!-- Password view -->
+    <main id="passwordView">
+      <img src="./assets/bomb.png" height="200" />
+      <h1>Can you defuse the bomb?</h1>
+
+      <label id="instructionLabel">Enter your code (You can try 3 times only !)</label>
+
+      <input type="password" name="password" id="passwordInput" class="input" />
+
+      <button id="checkButton">Check Code !</button>
+    </main>
+
+    <!-- Lost view -->
+    <main id="lostView" style="display: none">
+      <img src="./assets/explosion.png" />
+      <h1>You lost !</h1>
+
+      <button id="tryAgainButton">Try again !</button>
+    </main>
+
+    <!-- Won view -->
+    <main id="wonView" style="display: none">
+      <img src="./assets/win.png" />
+      <h1>You won !</h1>
+    </main>
+    <img src="./assets/cadt.png" />
+
+    <script src="index.js"></script>
+  </body>
+</html>
